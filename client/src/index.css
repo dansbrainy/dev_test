@@ -24,13 +24,14 @@ body {
     "main"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: auto 1fr auto;
   height: 100%;
 }
 
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: black;
+  padding: 1.2rem 1.8rem;
 }
 
 main {
@@ -40,8 +41,9 @@ main {
 
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: black;
   color: #ffffff;
+  opacity: 0.8;
 }
 
 /* Common */
@@ -74,32 +76,41 @@ li {
 }
 
 input,
-select,
-textArea,
 button {
   padding: 1rem;
-  border-radius: 0.5rem;
-  border: 0.1rem #a4a4a4 solid;
-  font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 0.22rem;
+  border: 0.15rem #00a826 solid;
+  font-size: 1.62rem;
+  /* font-family: Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 button {
   background-color: #f8f8f8;
+  padding: .6rem 2.1rem;
+  color: white;
+  font-weight: 800;
   cursor: pointer;
+}
+
+.button {
+  padding: .3rem;
 }
 
 input:hover,
 select:hover,
 textArea:hover,
 button:hover {
-  border: 0.1rem #404040 solid;
+  /* border: 0.1rem #404040 solid; */
 }
 
-button.primary {
-  background-color: #f0c040;
+button.signin {
+  background-color: #00a826;
+}
+
+button.signup {
+  color: #00a826;
 }
 
 button.block {
@@ -113,9 +124,9 @@ header a {
 }
 
 a.brand {
-  color: #ffffff;
-  font-size: 3rem;
-  font-weight: bold;
+  text-align: center;
+  display:    inline-table;
+  position:   relative;
 }
 
 .row {
@@ -151,7 +162,7 @@ img {
 }
 
 img.small {
-  max-width: 5rem;
+  max-width: 11rem;
   width: 100%;
 }
 
