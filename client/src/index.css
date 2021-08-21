@@ -36,7 +36,7 @@ header {
 
 main {
   grid-area: main;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 footer {
@@ -44,6 +44,31 @@ footer {
   background-color: black;
   color: #ffffff;
   opacity: 0.8;
+}
+
+/* nav */
+nav {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  justify-content: space-evenly;
+  background-color: #312f2c;
+  opacity: 0.1rem;
+}
+
+.nav-item {
+  color: grey;
+  padding: 2rem;
+  font-size: 1.52rem;
+  font-weight: bold;
+}
+
+.nav-item.active {
+  /* color: white; */
+}
+
+.nav-item:hover {
+  color: white;
 }
 
 /* Common */
@@ -61,9 +86,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #ff8000;
-}
+/* a:hover {
+  color: #00a826;
+} */
 
 ul {
   padding: 0;
@@ -88,14 +113,14 @@ button {
 
 button {
   background-color: #f8f8f8;
-  padding: .6rem 2.1rem;
+  padding: 0.6rem 2.1rem;
   color: white;
   font-weight: 800;
   cursor: pointer;
 }
 
 .button {
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
 input:hover,
@@ -125,8 +150,8 @@ header a {
 
 a.brand {
   text-align: center;
-  display:    inline-table;
-  position:   relative;
+  display: inline-table;
+  position: relative;
 }
 
 .row {
