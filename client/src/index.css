@@ -77,13 +77,6 @@ nav {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 468px) {
-  /* For mobile: */
-  .nav-item {
-    padding: 1.8rem 0;
-  }
-}
-
 .nav-item.active {
   color: white;
   border-bottom: 0.4rem solid #00a826;
@@ -131,12 +124,35 @@ button {
 }
 
 input {
-  border-top: none;
+  border: none;
+  border-bottom: 2px #00a826 solid;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
   font-size: 1.6rem;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
 }
 
 button {
-  background-color: #f8f8f8;
+  background-color: #00a826;
   padding: 0.6rem 2.1rem;
   color: white;
   font-size: 1.8rem;
@@ -163,15 +179,20 @@ button.signin {
   background-color: #00a826;
 }
 
+button.primary {
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
 button.signup {
   color: #00a826;
+  background-color: white;
 }
 
 button.block {
   max-width: 40rem;
   width: 34rem;
   font-size: 2.2rem;
-  background-color: #00a826;
   padding: 1rem;
 }
 
@@ -280,8 +301,9 @@ img.large {
 
 /* Form */
 .form {
-  max-width: 60rem;
+  max-width: 80rem;
   margin: 0 auto;
+  text-align: center;
 }
 
 .form > div {
@@ -292,28 +314,41 @@ img.large {
 
 .form label {
   margin: 1rem 0;
-  display: block;
-}
-
-/* Dropdown */
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-.dropdown-content {
-  position: absolute;
   display: none;
-  right: 0;
-  min-width: 12rem;
-  padding: 1rem;
-  z-index: 1rem;
-  background-color: #203040;
-  margin: 0;
-  margin-top: 0.4rem;
-  border-radius: 0.5rem;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/* MEDIA QUERIES START */
+
+@media only screen and (max-width: 468px) {
+  /* For mobile: */
+
+  body {
+    font-size: 1.4rem;
+  }
+  .nav-item {
+    padding: 1.8rem 0;
+  }
+
+  button.signin,
+  button.signup {
+    padding: 0.5rem;
+  }
+
+  button.primary {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  button.block {
+    max-width: 30rem;
+    width: 24rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
 }
+
+/* MEDIA QUERIES END */
