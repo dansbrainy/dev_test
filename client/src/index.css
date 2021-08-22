@@ -43,11 +43,12 @@ main {
 
 .home {
   background: url("https://cdn.betwaygroup.com/medusa-production-cache/b/6/b604ec0b6b3e584899a17fb3255e5177a8e649e0.webp")
-    no-repeat center center fixed;
+    no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  object-fit: cover;
   height: 100%;
   overflow: hidden;
 }
