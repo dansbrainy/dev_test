@@ -4,10 +4,11 @@
   "description": "Dev Test App",
   "main": "index.js",
   "scripts": {
-    "client": "cd client && npm start"
+    "start": "cd client && node index.js",
+    "client": "cd client && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "type": "module",
-  "proxy": "http://localhost:5000/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dansbrainy/dev_test.git"
