@@ -54,10 +54,11 @@ main {
 }
 
 .bet {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+
   width: 100%;
   height: auto;
+  bottom: 0 !important;
 }
 
 footer {
