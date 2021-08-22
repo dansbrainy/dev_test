@@ -339,8 +339,18 @@ img.background {
   body {
     font-size: 1.4rem;
   }
+
+  header {
+    padding: 0.5rem 0.9rem;
+  }
+
   .nav-item {
     padding: 1.8rem 0;
+  }
+
+  img.small {
+    max-width: 8rem;
+    width: 100%;
   }
 
   button.signin,
@@ -362,6 +372,10 @@ img.background {
 
   h1 {
     font-size: 2rem;
+  }
+
+  .card-body {
+    padding: 0.3rem;
   }
 }
 
