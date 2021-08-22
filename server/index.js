@@ -24,7 +24,10 @@ app.get("/api/bets", (req, res) => {
 const port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV === "production") {
+  // Exprees will serve up production assets
   app.use(express.static("build"));
+
+  // Express serve up index.html file if it doesn't recognize route
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
