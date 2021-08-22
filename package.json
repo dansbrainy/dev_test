@@ -4,9 +4,8 @@
   "description": "Dev Test App",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "client": "cd client && npm start",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "build": "cd client && npm install && npm run build",
+    "start": "nodemon --watch backend --exec node --experimental-modules server/index.js"
   },
   "type": "module",
   "repository": {
@@ -22,6 +21,7 @@
   "bugs": {
     "url": "https://github.com/dansbrainy/dev_test/issues"
   },
+  "homepage": "https://github.com/dansbrainy/dev_test#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1"
