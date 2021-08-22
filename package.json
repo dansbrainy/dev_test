@@ -2,7 +2,7 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Dev Test App",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "client": "cd client && npm start",

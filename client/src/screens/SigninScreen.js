@@ -10,7 +10,7 @@ export default function SigninScreen(props) {
     : "/";
 
   return (
-    <div>
+    <div className="row center">
       <form className="form">
         <div>
           <h1>Sign In</h1>
