@@ -8,6 +8,8 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
+const __dirname = path.resolve();
+
 // Add Access Control Allow Origin headers
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
@@ -30,7 +32,7 @@ if (process.env.NODE_ENV === "production") {
 
   // Express serve up index.html file if it doesn't recognize route
 
-  app.get("/", (req, res) => {
+  app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
