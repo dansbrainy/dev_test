@@ -124,18 +124,22 @@ li {
 
 input,
 button {
-  padding: 1rem;
   border-radius: 0.22rem;
   border: 0.15rem #00a826 solid;
-  font-size: 1.8rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  border-top: none;
+  font-size: 1.6rem;
 }
 
 button {
   background-color: #f8f8f8;
   padding: 0.6rem 2.1rem;
   color: white;
+  font-size: 1.8rem;
   font-weight: 900;
   cursor: pointer;
   font-family: Calibri, "Franklin Gothic Book", "Arial Narrow", Arial,

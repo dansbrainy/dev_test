@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 // Add Access Control Allow Origin headers
 app.use((req, res, next) => {
   const corsWhitelist = [
-    "http://localhost:3000",
     "https://digi-outsource-dev-test.herokuapp.com/",
+    "http://localhost:3000",
   ];
   if (corsWhitelist.indexOf(req.headers.origin) !== -1) {
     res.header("Access-Control-Allow-Origin", req.headers.origin);
