@@ -18,10 +18,10 @@ function App() {
           </div>
 
           <div>
-            <Link className="button" to="/">
+            <Link className="button" to="/signin">
               <button className="signin">Login</button>
             </Link>
-            <Link className="button" to="/">
+            <Link className="button" to="/signin">
               <button className="signup">Sign up</button>
             </Link>
           </div>

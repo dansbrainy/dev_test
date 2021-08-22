@@ -77,6 +77,13 @@ nav {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 468px) {
+  /* For mobile: */
+  .nav-item {
+    padding: 1.8rem 0;
+  }
+}
+
 .nav-item.active {
   color: white;
   border-bottom: 0.4rem solid #00a826;
