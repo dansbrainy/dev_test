@@ -15,7 +15,7 @@ export default function HomeScreen() {
     const fecthData = async () => {
       try {
         setLoading(true);
-        axios.defaults.baseURL = process.env.REACT_APP_SERVER_URL;
+        // axios.defaults.baseURL = process.env.REACT_APP_SERVER_URL;
         const { data } = await axios.get("/api/bets");
         setLoading(false);
         setBets(data);

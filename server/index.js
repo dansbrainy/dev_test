@@ -10,9 +10,21 @@ app.use(express.urlencoded({ extended: true }));
 
 // Add Access Control Allow Origin headers
 app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://betway-dev-test.herokuapp.com"
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
+app.use((req, res, next) => {
   const corsWhitelist = [
-    "https://digi-outsource-dev-test.herokuapp.com/",
     "http://localhost:3000",
+    "https://betway-dev-test.herokuapp.com",
   ];
   if (corsWhitelist.indexOf(req.headers.origin) !== -1) {
     res.header("Access-Control-Allow-Origin", req.headers.origin);
