@@ -1,7 +1,5 @@
 import express from "express";
-import dotenv from "dotenv";
-
-dotenv.config();
+import data from "./data.js";
 
 const app = express();
 
@@ -9,15 +7,28 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.send("Server is ready");
+// Add Access Control Allow Origin headers
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
 });
 
-app.use((err, req, res, next) => {
-  res.status(500).send({ message: err.message });
+app.get("/api/bets", (req, res) => {
+  res.send(data.bets);
 });
 
 const port = process.env.PORT || 5000;
+
+// console.log that your server is up and running
 app.listen(port, () => {
   console.log(`Serve at http://localhost:${port}`);
+});
+
+// create a GET route
+app.get("/server", (req, res) => {
+  res.send({ express: "SERVER IS CONNECTED TO REACT" });
 });

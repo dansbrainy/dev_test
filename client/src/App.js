@@ -32,7 +32,7 @@ function App() {
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
 
-        <footer className="row center">to update</footer>
+        <footer className="row center"></footer>
       </div>
     </BrowserRouter>
   );

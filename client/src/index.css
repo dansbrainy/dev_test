@@ -6,8 +6,9 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.7rem;
+  font-family: Calibri, "Franklin Gothic Book", "Arial Narrow", Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,19 +25,33 @@ body {
     "main"
     "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  height: 100%;
+  grid-template-rows: auto 1fr;
+  height: 100% !important;
 }
 
 header {
   grid-area: header;
   background-color: black;
-  padding: 1.2rem 1.8rem;
+  padding: 1rem 1.8rem;
 }
 
 main {
   grid-area: main;
   /* padding: 1rem; */
+}
+
+.home {
+  background-image: url("https://cdn.betwaygroup.com/medusa-production-cache/b/6/b604ec0b6b3e584899a17fb3255e5177a8e649e0.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.bet {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
 }
 
 footer {
@@ -52,19 +67,19 @@ nav {
   width: 100%;
   margin: 0;
   justify-content: space-evenly;
-  background-color: #312f2c;
-  opacity: 0.1rem;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .nav-item {
   color: grey;
-  padding: 2rem;
-  font-size: 1.52rem;
+  padding: 1.8rem 2.3rem;
+  font-size: 1.58rem;
   font-weight: bold;
 }
 
 .nav-item.active {
-  /* color: white; */
+  color: white;
+  border-bottom: 0.4rem solid #00a826;
 }
 
 .nav-item:hover {
@@ -73,17 +88,17 @@ nav {
 
 /* Common */
 h1 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   padding: 1rem 0;
+  margin: 0;
 }
 
-h2 {
-  font-size: 1.6rem;
-  padding: 1rem 0;
+p {
+  padding: 0;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* a:hover {
@@ -105,8 +120,7 @@ button {
   padding: 1rem;
   border-radius: 0.22rem;
   border: 0.15rem #00a826 solid;
-  font-size: 1.62rem;
-  /* font-family: Helvetica, Arial, sans-serif; */
+  font-size: 1.8rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -115,19 +129,23 @@ button {
   background-color: #f8f8f8;
   padding: 0.6rem 2.1rem;
   color: white;
-  font-weight: 800;
+  font-weight: 900;
   cursor: pointer;
+  font-family: Calibri, "Franklin Gothic Book", "Arial Narrow", Arial,
+    sans-serif !important;
 }
 
 .button {
-  padding: 0.3rem;
+  padding: 0.2rem;
 }
 
 input:hover,
 select:hover,
 textArea:hover,
 button:hover {
-  /* border: 0.1rem #404040 solid; */
+  transform: scale(1.01, 1.01);
+  color: #00a826;
+  background-color: white !important;
 }
 
 button.signin {
@@ -139,7 +157,11 @@ button.signup {
 }
 
 button.block {
-  width: 100%;
+  max-width: 40rem;
+  width: 34rem;
+  font-size: 2.2rem;
+  background-color: #00a826;
+  padding: 1rem;
 }
 
 /* Header */
@@ -184,10 +206,12 @@ a.brand {
 /* Image */
 img {
   border-radius: 0.5rem;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 img.small {
-  max-width: 11rem;
+  max-width: 10rem;
   width: 100%;
 }
 
@@ -203,18 +227,19 @@ img.large {
 
 /* Card */
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: #f8f8f8;
-  border-radius: 0.5rem;
-  margin: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
 }
 
 .card-body {
-  padding: 1rem;
+  padding: 0.7rem;
 }
 
 .card-body > * {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 /* Alert */
