@@ -4,7 +4,7 @@
   "description": "Dev Test App",
   "main": "server/index.js",
   "scripts": {
-    "start": "cd client && node index.js",
+    "start": "cd server && node index.js",
     "client": "cd client && npm start",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
