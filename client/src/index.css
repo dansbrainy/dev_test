@@ -375,7 +375,11 @@ img.background {
   }
 
   .card-body {
-    padding: 0.3rem;
+    padding-top: 0.3rem;
+  }
+
+  p {
+    margin: 0.7rem;
   }
 }
 
